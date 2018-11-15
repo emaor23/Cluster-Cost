@@ -1,0 +1,274 @@
+{
+   "dashboards": [{
+      "autoswitchEnabled": false,
+      "columnCount": 1,
+      "columnProportion": "1",
+      "creationTime": 1542206881555,
+      "description": "",
+      "disabled": false,
+      "gridsterMaxColumns": 12,
+      "hidden": false,
+      "homeTab": false,
+      "id": "a20096f0-ab76-46e3-a628-88ae30b03ece",
+      "importAttempts": 0,
+      "importComplete": true,
+      "isDefault": false,
+      "locked": false,
+      "name": "Operations Performance/Cluster Cost",
+      "namePath": "Operations Performance",
+      "rank": 97,
+      "shared": false,
+      "temporary": false,
+      "userId": "d78b75ee-4faa-4f03-aa33-e716b473105a",
+      "widgets": [
+         {
+            "collapsed": false,
+            "config": {
+               "additionalColumns": [],
+               "additionalColumns_resource": [],
+               "barsCount": 15,
+               "depth": 10,
+               "filterMode": "tagFilter",
+               "filterOldMetrics": {"filterOldMetrics": false},
+               "metricOption": {
+                  "metricInfo": {
+                     "path": ["/source/GROUP_cost/cost|totalCost"],
+                     "value": "cost|totalCost"
+                  },
+                  "resourceKindId": ["resourceKind:id:0_::_"],
+                  "tagFilter": null,
+                  "value": {"metricOption": "metricsHighestUtilization"}
+               },
+               "mode": "metric",
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "regenerationTime": 15,
+               "roundDecimals": 1,
+               "selfProvider": {"selfProvider": true},
+               "tagOption": {
+                  "tagFilter": null,
+                  "value": {"tagOption": "leastHealthyApplications"}
+               },
+               "title": "Top-15 Most  expensive Clusters"
+            },
+            "gridsterCoords": {
+               "h": 11,
+               "w": 4,
+               "x": 9,
+               "y": 1
+            },
+            "height": 609,
+            "id": "9a25e008-8802-41c2-ad4d-dae82adfebd7",
+            "title": "Top-15 Most  expensive Clusters",
+            "type": "ParetoAnalysis"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "chartViewItems": [],
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "resource": {
+                  "adapterKindId": "VMWARE",
+                  "allowDrag": true,
+                  "allowDrop": true,
+                  "checked": null,
+                  "children": null,
+                  "cls": "",
+                  "depth": 1,
+                  "expandable": true,
+                  "expanded": false,
+                  "href": "",
+                  "hrefTarget": "",
+                  "icon": "",
+                  "iconCls": "resknd_default_vmware_vsphereworld",
+                  "iconSrc": "images/resknd/default/16x16/VMWARE_vSphere World.png",
+                  "id": "86771af4-3f18-4dd2-b810-147b80620f5f",
+                  "index": 0,
+                  "isFirst": true,
+                  "isLast": true,
+                  "leaf": false,
+                  "loaded": false,
+                  "loading": false,
+                  "nodeType": "resource",
+                  "parentId": "source",
+                  "qshowDelay": 0,
+                  "qtip": "",
+                  "qtitle": "",
+                  "resourceId": "resource:id:0_::_",
+                  "resourceKindId": "002006VMWAREvSphere World",
+                  "resourceKindKey": "vSphere World",
+                  "resourceKindName": "vSphere World",
+                  "resourceKindType": 8,
+                  "resourceName": "vSphere World",
+                  "root": false,
+                  "rootResourceId": "86771af4-3f18-4dd2-b810-147b80620f5f",
+                  "text": "vSphere World",
+                  "traversalSpecId": "vSphere Hosts and Clusters-VMWARE-vSphere World",
+                  "uniqueId": "86771af4-3f18-4dd2-b810-147b80620f5f_1542208998602",
+                  "visible": true
+               },
+               "selectFirstRow": {"selectFirstRow": false},
+               "selfProvider": {"selfProvider": true},
+               "title": "Cluster Total Cost",
+               "traversalSpecId": null,
+               "viewDefinitionId": "722bb0db-eb89-4a13-b3e0-8b4f5b2859cb"
+            },
+            "gridsterCoords": {
+               "h": 11,
+               "w": 8,
+               "x": 1,
+               "y": 1
+            },
+            "height": 609,
+            "id": "79f87f44-5764-436f-b937-ad891baef418",
+            "title": "Cluster Total Cost",
+            "type": "View"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "configs": [{
+                  "attributeKind": {"value": ""},
+                  "color": {"thresholds": {
+                     "colors": [
+                        "#00ff00",
+                        "#888800",
+                        "#ff0000"
+                     ],
+                     "values": [
+                        0,
+                        50,
+                        100
+                     ]
+                  }},
+                  "colorBy": {
+                     "metricKey": "cost|totalCost",
+                     "value": "Cost|Monthly Cluster Total Cost (US$)"
+                  },
+                  "focusOnGroups": true,
+                  "groupBy": {
+                     "id": "004null002006VMWAREVMwareAdapter Instance",
+                     "originalText": "vCenter Server",
+                     "parentId": "VMWARE",
+                     "parentText": "vCenter Adapter",
+                     "text": "vCenter Server",
+                     "type": "resourceKind",
+                     "typeId": "resourceKind:id:1_::_"
+                  },
+                  "mode": {"mode": false},
+                  "name": "cluster number of VM X Total Cost",
+                  "relationalGrouping": false,
+                  "resourceKind": "resourceKind:id:0_::_",
+                  "sizeBy": {
+                     "metricKey": "summary|number_running_vms",
+                     "value": "Summary|Number of Running VMs (Virtual Machines)"
+                  },
+                  "solidColoring": false,
+                  "tagFilter": null,
+                  "thenBy": null
+               }],
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "title": "Cluster number of VMs X Total Cost",
+               "value": 0
+            },
+            "gridsterCoords": {
+               "h": 9,
+               "w": 8,
+               "x": 1,
+               "y": 12
+            },
+            "height": 495,
+            "id": "99c876ca-b603-4d4d-bba4-f1c6fd682dcb",
+            "states": [{
+               "key": "perm_HeatMap_widget_a20096f0-ab76-46e3-a628-88ae30b03ece_99c876ca-b603-4d4d-bba4-f1c6fd682dcb",
+               "value": "o%3A"
+            }],
+            "title": "Cluster number of VMs X Total Cost",
+            "type": "Heatmap"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "chartHeight": 115,
+               "metricKey": "OnlineCapacityAnalytics|capacityRemainingPercentage",
+               "metricLabel": "",
+               "metricName": "Capacity Remaining Percentage (%)",
+               "metricType": {"metricType": "custom"},
+               "metricUnit": {
+                  "metricUnitId": -1,
+                  "metricUnitName": "Default Unit"
+               },
+               "mode": "self",
+               "paginationNumber": 15,
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "resourceKindId": "resourceKind:id:0_::_",
+               "selectFirstRow": {"selectFirstRow": false},
+               "selfProvider": {"selfProvider": true},
+               "showMetricLabel": {"showMetricLabel": false},
+               "showResourceName": {"showResourceName": true},
+               "sortBy": "metricValue",
+               "sortByDir": {"orderByDir": "asc"},
+               "tagFilter": {
+                  "path": ["/source/kind/kind:resourceKind:id:0_::_"],
+                  "value": {
+                     "adapterInstance": [],
+                     "adapterKind": [],
+                     "bus": [],
+                     "collector": [],
+                     "day": [],
+                     "exclaim": false,
+                     "healthRange": [],
+                     "kind": ["resourceKind:id:0_::_"],
+                     "maintenanceSchedule": [],
+                     "state": [],
+                     "status": [],
+                     "tag": [],
+                     "tier": []
+                  }
+               },
+               "title": "Cluster Capacity Remaining %",
+               "undefined": "Capacity Analytics Generated|Capacity Remaining Percentage (%)"
+            },
+            "gridsterCoords": {
+               "h": 9,
+               "w": 4,
+               "x": 9,
+               "y": 12
+            },
+            "height": 495,
+            "id": "4edcd3c0-ab33-41f7-b1cb-20cfccffe84f",
+            "states": [{
+               "key": "permDateRange_HealthChart_widget_a20096f0-ab76-46e3-a628-88ae30b03ece_4edcd3c0-ab33-41f7-b1cb-20cfccffe84f",
+               "value": "s%3A%7B%22dateRange%22%3A%22last6Hour%22%2C%22dateFrom%22%3Anull%2C%22dateTo%22%3Anull%2C%22timeFrom%22%3Anull%2C%22timeTo%22%3Anull%7D"
+            }],
+            "title": "Cluster Capacity Remaining %",
+            "type": "HealthChart"
+         }
+      ]
+   }],
+   "entries": {
+      "resource": [{
+         "adapterKindKey": "VMWARE",
+         "identifiers": [],
+         "internalId": "resource:id:0_::_",
+         "name": "vSphere World",
+         "resourceKindKey": "vSphere World"
+      }],
+      "resourceKind": [
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:1_::_",
+            "resourceKindKey": "VMwareAdapter Instance"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:0_::_",
+            "resourceKindKey": "ClusterComputeResource"
+         }
+      ]
+   },
+   "uuid": "b4ba82cf-ec44-4da4-897b-2be1a881ff2d"
+}
